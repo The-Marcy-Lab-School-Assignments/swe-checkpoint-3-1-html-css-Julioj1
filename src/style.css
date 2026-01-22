@@ -17,3 +17,122 @@ img {
 }
 
 /* Add your styles below */
+:root {
+  --font-family: Arial, sans-serif;
+  --color-border: #f5f5f5;
+  --color-background: black;
+  --color-text: #f5f5f5;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: var(--font-family);
+  color: var(--color-text);
+  /* margin: auto;
+  max-width: auto; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.logo img {
+  width: 100px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.ada {
+  border-radius: 50%;
+  max-width: 300px;
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.profile-info {
+  max-width: 500px;
+}
+
+.stats {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.description {
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1800px;
+  margin: auto;
+  padding: 30px;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.post-card {
+  align-items: center;
+  gap: 15px;
+}
+
+.post-card img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.post-card span {
+  display: block;
+}
+
+@media (min-width: 500px) {
+  .profile{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .posts-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .profile{
+    flex-direction: row;
+    gap: 40px;
+  }
+  .posts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
